@@ -1,21 +1,14 @@
 from tkinter import *
 
 root = Tk()
-topFrame = Frame(root)
-topFrame.pack()
 
-bottomFrame = Frame(root)
-bottomFrame.pack(side=BOTTOM)
+one = Label(root, text="One", bg="red", fg="white")
+one.pack()
 
-button1 = Button(topFrame, text="Click 0", fg="red")
-button2 = Button(topFrame, text="Click 1", fg="blue")
+two = Label(root, text="two", bg="green", fg="white")
+two.pack(fill=X)
 
-button3 = Button(bottomFrame, text="Click 0", fg="green")
-button4 = Button(bottomFrame, text="Click 1", fg="black")
-
-button1.pack(side=LEFT)
-button2.pack(side=RIGHT)
-button3.pack(side=LEFT)
-button4.pack(side=BOTTOM)
+three = Label(root, text="Three", bg="blue", fg="white")
+three.pack(side=LEFT, fill=Y)
 
 root.mainloop()
