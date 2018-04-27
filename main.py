@@ -2,13 +2,19 @@ from tkinter import *
 
 root = Tk()
 
-one = Label(root, text="One", bg="red", fg="white")
-one.pack()
+label_1 = Label(root, text="Name")
+label_2 = Label(root, text="Password")
 
-two = Label(root, text="two", bg="green", fg="white")
-two.pack(fill=X)
+entry_1 = Entry(root)
+entry_2 = Entry(root)
 
-three = Label(root, text="Three", bg="blue", fg="white")
-three.pack(side=LEFT, fill=Y)
+label_1.grid(row=0, sticky=E)
+label_2.grid(row=1, sticky=E)
+
+entry_1.grid(row=0, column=1)
+entry_2.grid(row=1, column=1)
+
+c = Checkbutton(root, text="Log in")
+c.grid(columnspan=2)
 
 root.mainloop()
